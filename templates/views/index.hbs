@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Website | Search and know about the weather</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
+    <link rel="icon" href="/images/weather-icon.png">
+    <link rel="stylesheet" href="/css/style.css">
+    
+</head>
+<body>
+
+    {{> header}}
+
+    <section class="main-body">
+
+        <div class="card">
+            <div class="search">
+                <form>
+                    <input type="text" placeholder="Location...(eg-Hamirpur)">
+                    <button>Search</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="report">
+                <h3 id="message-1">Welcome to the weather</h3>
+                <h3 id="message-2"></h3>
+            </div>
+        </div>
+
+    </section>
+
+
+    
+    {{>footer}}
+
+    <script src="/js/app.js"></script>
+</body>
+<style>
+    .act1{
+        background: gray;
+        color: white;
+        padding: 1rem 3rem;
+        border-radius: 2rem;
+    }
+</style>
+
+</html>
