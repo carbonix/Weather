@@ -24,17 +24,17 @@ weatherform.addEventListener('submit', (e) =>{
     const location = search.value
     messageOne.textContent = 'Loading...'
     messageTwo.textContent = ""
-    fetch('http://127.0.0.1:3000/weather?address=' + location).then((response) =>{
-    response.json().then((data) => {
-        if(data.error)
-        {
-            messageOne.textContent = data.error
-        }
-        else
-        {
-            messageOne.textContent = 'Forecast - ' + data.forecast
-            messageTwo.textContent = 'Temperature - ' + data.temperature
-        }
+    fetch('/weather?address=' + location).then((response) =>{
+        response.json().then((data) => {
+            if(data.error)
+            {
+                messageOne.textContent = data.error
+            }
+            else
+            {
+                messageOne.textContent = 'Forecast - ' + data.forecast
+                messageTwo.textContent = 'Temperature - ' + data.temperature
+            }
+        })
     })
-})
 })
